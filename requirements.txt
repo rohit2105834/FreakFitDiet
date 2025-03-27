@@ -2,4 +2,4 @@ Flask==3.1.0
 flask-cors==5.0.1
 openai==1.69.0
 instructor==1.7.7
--e git+https://github.com/BrainBlend-AI/atomic-agents.git@e5666f238800bf346daed268313566911dcb92b1#egg=atomic_agents
+atomic-agents @ git+https://github.com/BrainBlend-AI/atomic-agents.git@e5666f238800bf346daed268313566911dcb92b1
