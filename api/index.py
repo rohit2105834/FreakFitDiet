@@ -65,6 +65,6 @@ def chat():
         print("Error:", str(e))
         return jsonify({"error": str(e)}), 500
 
-# Vercel requires a `handler` function
-def handler(event, context):
-    return app(event, context)
+# ✅ Required for Vercel: Convert Flask app to a WSGI handler
+from flask_lambda import FlaskLambda
+app = FlaskLambda(app)
