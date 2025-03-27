@@ -65,6 +65,7 @@ def chat():
         print("Error:", str(e))
         return jsonify({"error": str(e)}), 500
 
-# ✅ Required for Vercel: Convert Flask app to a WSGI handler
-from flask_lambda import FlaskLambda
-app = FlaskLambda(app)
+# Remove FlaskLambda import, no need for that in Vercel deployments
+# Add WSGI handler for Vercel
+if __name__ == "__main__":
+    app.run(debug=True)
